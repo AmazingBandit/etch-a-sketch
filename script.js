@@ -20,22 +20,23 @@ newGrid.addEventListener("click", () => {
   let gridSize;
   const askUser = () => {
     gridSize = prompt(
-      "What size would you like the grid to be? (ex 5 will result in 5x5, ect.",
-      "100 max"
+      "What size would you like the grid to be? (ex 5 will result in 5x5, ect."
     );
     return gridSize;
   };
 
   //checks for conditions of value entered and continues asking until conditions met
-  while (
-    gridSize == null ||
+  do {
+    askUser();
+    if (gridSize == null) {
+      return;
+    }
+  } while (
     gridSize == undefined ||
     gridSize > 100 ||
     gridSize < 1 ||
     isNaN(gridSize) == true
-  ) {
-    askUser();
-  }
+  );
 
   //clear out grid by removing all child div to prepare for new grid
   while (container.firstChild) {

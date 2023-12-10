@@ -1,11 +1,15 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
-  width: 100vw;
+  max-height: 75vh;
+  max-width: 75vw;
 }
 
 .container > div {
-  flex: 1 1 calc(100% / 17);
+  min-height: 7px;
+  max-height: 7px;
+  min-width: 7px;
+  max-width: 7px;
+  flex: 1 1 0;
   border: 1px solid black;
 }
