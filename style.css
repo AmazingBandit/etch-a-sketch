@@ -1,15 +1,14 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-height: 75vh;
-  max-width: 75vw;
+  max-width: 960px;
 }
 
 .container > div {
-  min-height: 7px;
-  max-height: 7px;
-  min-width: 7px;
-  max-width: 7px;
+  min-height: 6px;
+  max-height: 6px;
+  min-width: 6px;
+  max-width: 6px;
   flex: 1 1 0;
   border: 1px solid black;
 }
