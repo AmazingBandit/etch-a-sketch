@@ -10,7 +10,7 @@ const createGrid = (x) => {
     container.append(childDiv);
 
     //on mouse over changes color to red
-    childDiv.addEventListener("mouseover", () => {
+    childDiv.addEventListener("mousemove", () => {
       childDiv.style.backgroundColor = "green";
     });
   }
@@ -21,9 +21,7 @@ const newGrid = document.querySelector(".newGrid");
 newGrid.addEventListener("click", () => {
   let gridSize;
   const askUser = () => {
-    gridSize = prompt(
-      "What size would you like the grid to be? (ex 5 will result in 5x5, ect."
-    );
+    gridSize = prompt("Enter a number per side for new grid: ");
     return gridSize;
   };
 
