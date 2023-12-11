@@ -5,11 +5,13 @@ let defaultGridSize = 16;
 const createGrid = (x) => {
   for (let i = 0; i < x ** 2; i++) {
     let childDiv = document.createElement("div");
+    //adds flex size for pixel and changes the pixel based on user input
+    childDiv.style.flex = `1 1 calc(100%/${x})`;
     container.append(childDiv);
 
     //on mouse over changes color to red
     childDiv.addEventListener("mouseover", () => {
-      childDiv.style.backgroundColor = "red";
+      childDiv.style.backgroundColor = "green";
     });
   }
 };
@@ -33,7 +35,7 @@ newGrid.addEventListener("click", () => {
     }
   } while (
     gridSize == undefined ||
-    gridSize > 100 ||
+    gridSize > 200 ||
     gridSize < 1 ||
     isNaN(gridSize) == true
   );
